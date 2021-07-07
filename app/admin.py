@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Alumno, Asistencia, Cursos, Periodos, Ingreso_notas
+from .models import Alumno, Asistencia, Cursos, Periodos, Ingreso_notas, Ingreso_asistencia
 
 # Register your models here.
 @admin.register(Alumno)
@@ -27,3 +27,7 @@ class PeriodosAdmin(admin.ModelAdmin):
 @admin.register(Ingreso_notas)
 class IngresonotasAdmin(admin.ModelAdmin):
     list_display = ['id', 'alumno', 'curso', 'nota', 'periodo']
+    
+@admin.register(Ingreso_asistencia)
+class IngresoasistenciaAdmin(admin.ModelAdmin):
+    list_display = ['id', 'alumno', 'curso', 'asistencia', 'periodo', 'class_date']
