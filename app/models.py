@@ -96,7 +96,7 @@ class Ingreso_asistencia(models.Model):
     id = models.AutoField(primary_key=True)
     alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
     curso = models.ForeignKey(Cursos, on_delete=models.CASCADE)
-    asistencia = models.ForeignKey(Cursos, on_delete=models.CASCADE)
+    asistencia = models.ForeignKey(Asistencia, on_delete=models.CASCADE)
     class_date = models.DateField()
     periodo = models.ForeignKey(Periodos, on_delete=models.CASCADE)
     content = models.TextField()
