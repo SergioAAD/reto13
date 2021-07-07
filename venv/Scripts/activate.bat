@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\Retos Diplomado\Reto 13\venv
+set VIRTUAL_ENV=D:\JHOM\idat\repos\hackathon\reto13\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
