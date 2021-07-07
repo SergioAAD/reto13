@@ -91,3 +91,24 @@ class Ingreso_notas(models.Model):
 
     def __str__(self):
         return self.nota
+  
+class Ingreso_asistencia(models.Model):
+    id = models.AutoField(primary_key=True)
+    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
+    curso = models.ForeignKey(Cursos, on_delete=models.CASCADE)
+    asistencia = models.ForeignKey(Cursos, on_delete=models.CASCADE)
+    class_date = models.DateField()
+    periodo = models.ForeignKey(Periodos, on_delete=models.CASCADE)
+    content = models.TextField()
+    pub_date = models.DateField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'ingresoasistencia'
+        verbose_name = 'Ingreso Asistencia'
+        verbose_name_plural = 'Ingreso Asistencias'
+        ordering = ['id']
+
+    
+    
+    
